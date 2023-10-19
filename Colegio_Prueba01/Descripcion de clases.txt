@@ -1,0 +1,12 @@
+**************************************************************************
+Proyecto por Jose Armando Lopez Cruz, Alias: Dajokaem
+Aqui se describen y detallan las clases y los objetos para tener un mejor 
+control de ellos en el programa, 
+Alumno
+	Dpi, int, 
+	nm, String, es el nombre del alumno
+	ape, String, es el apellido
+Examenes, clase interna de Alumno
+	dur, int, duracion del examen
+	nota, String, nota del examen
+	mt, String, codigo de materia del examen, ej. 7690

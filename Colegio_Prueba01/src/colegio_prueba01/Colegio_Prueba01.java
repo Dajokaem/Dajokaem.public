@@ -1,9 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
+
 package colegio_prueba01;
 
+import Persistencia.ControladoraPersistencia;
 import java.util.*;
 
 public class Colegio_Prueba01 {
@@ -12,17 +10,17 @@ public class Colegio_Prueba01 {
     static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Conexion conexion = new Conexion();
-        conexion.Conectar();
-        int dp, dur, i, j, op = 0, po;
-        String name, ape, not, nada;
+
+        /*int  dur, i, j, op = 0, po;
+        long dp;
+        String name, ape, not, nada, mm;
         do {
             op = menu();
             switch (op) {
                 case 1:
                     System.out.println("Ok, Dame los datos del Alumno");
                     System.out.println("Dame su dpi");
-                    dp = leer.nextInt();
+                    dp = leer.nextLong();
                     System.out.println("Dame su nombre");
                     name = leer.next();
                     System.out.println("Dame su apellido");
@@ -34,7 +32,7 @@ public class Colegio_Prueba01 {
                 case 2:
                     System.out.println("Ok, dame el DPI del alumno dueño de este examen");
                     po = 0;
-                    dp = leer.nextInt();
+                    dp = leer.nextLong();
                     System.out.println(alumnos.size());
                     for (i = 0; i < alumnos.size(); i++) {
                         System.out.println("xxxx");
@@ -58,7 +56,9 @@ public class Colegio_Prueba01 {
                             System.out.println("Dame la nota del examen");
                             not = leer.next();
                         }
-                        alumnos.get(po).Registro(dur, not.toLowerCase());
+                        System.out.println("Dame el codigo de materia del examen");
+                        mm = leer.next();
+                        alumnos.get(po).Registro(dur, not.toLowerCase(), mm);
                     }else{
                         System.out.println("Lo lamento, El dpi ingresado es incorrecto o no existe en el sistema");
                     }
@@ -92,6 +92,14 @@ public class Colegio_Prueba01 {
                     break;
             }
         } while (op != 0);
+*/
+        System.out.println("1");
+        alumnos.add(new Alumno(3007249770101L, "Jose", "Lopez"));
+        System.out.println("2");
+        ControladoraPersistencia control = new ControladoraPersistencia();
+        alumnos.get(0).mostrar();
+        control.crearAlumno(alumnos.get(0));
+        
     }
 
     public static int menu() {
@@ -105,6 +113,11 @@ public class Colegio_Prueba01 {
         a = leer.next();
         return Integer.parseInt(a);
     }
-
+    public static void cargar(){
+        
+    }
+    public static void descargar(){
+        
+    }
 }
 
